@@ -1,7 +1,4 @@
 library(gplots)
-#setwd("C:\\Users\\infobio\\Desktop\\program\\ruby\\phylogenetic_profiling")
-#setwd("C:/Users/infobio/Desktop/phylogenetic_analyses/phylogenetic_analyses_data")
-
 data <- read.delim("test_out1.txt", header=T,row.names=1, sep="\t")
 data<-t(data)
 
