@@ -1,10 +1,7 @@
 library(gplots)
 #setwd("C:\\Users\\infobio\\Desktop\\program\\ruby\\phylogenetic_profiling")
-
-#この命令でカレントディレクトリを移動します。データの入った場所を指定してください。
 #setwd("C:/Users/infobio/Desktop/phylogenetic_analyses/phylogenetic_analyses_data")
 
-#タブ区切りで記述した系統プロファイルデータを読み込ませる。
 data <- read.delim("test_out1.txt", header=T,row.names=1, sep="\t")
 data<-t(data)
 
@@ -20,7 +17,7 @@ data<-t(data)
                 scale          = c("none"),
  
                 # color-)
-                col            =  #cm.colors(100),  # redgreen(75) # 赤緑
+                col            =  #cm.colors(100), 
                    grey(0:99/100)[100:1],
                 trace          = c("none"),
                 margin         = c(2,2),
@@ -46,7 +43,7 @@ dev.off()
 
 
 old.op <- options(max.print=999999)
-sink("result_clustring_carpet.txt")	#出力先
+sink("result_clustring_carpet.txt")	
 
 t(h$carpet) 
 sink()
